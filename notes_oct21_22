@@ -1,0 +1,103 @@
+/* OCT21
+object oriented programming (OOP)
+ -programming paradigm based on the concept of objects, which can contain data and code
+ -paradigm - a set of rules and conventions to be followed. 
+ -functional programming (ie racket, defining a lot of functions and then calling them) vs oop (manipulating objects instead of functions)
+ -createing objects + providing instructions 
+
+objects 
+ -contain data(what object knows) and code (what it does)
+ -fields are the data associated with an object (variables existing within object)
+ -methods are actions objects perform (functions designed to work with fields of an object)
+ -
+ 
+*/
+class Ball { //users do not interact with the information in a class 
+  //stuff goes here
+}
+
+Ball b0,b1;
+
+
+void setup () {
+  size(1000,1000);
+  b0=new Ball(); //calling constructor, aka method used to make new object
+  b1=new Ball(); //interacting indirectly with class through methods
+}
+
+void draw() {
+  background(0);
+  b0.display();
+  b1.display();
+  b0.move();
+  b1.move();
+}
+/*
+ball
+
+fields
+ -float cx
+ -float cy
+ -int radius
+ -float xspeed
+ -float yspeed
+ -color c
+ 
+
+methods
+ -display()
+ -move()
+ -constructor() ->sets up
+ -
+*/
+
+/* OCT22
+classes
+blueprint for an object
+provides code for fields via instance variables methods and constructors
+
+classes written in separate files named the class (same folder)
+in the same folder in ur local files (all taken into account when running the code)
+
+*/
+class DVDLogo { 
+  //what a class file looks like. once you make a class it becomes a valid non primitive type (as opposed to primitive types like int bool float etc)
+  //you can use this new type in other classes
+  //everything in here is class definition
+  //instance variables, know what your data is!
+  int rectWidth;
+  int rectHeight; //same names for instance variables for multiple classes
+  int x;
+  int y;
+  
+  //constructors next so you can make instances of your class
+  DVDLogo() { //default constructor
+    int x=random(1,100);
+    int y=random(1,100);
+    //no need for a return
+  }
+  DVDLogo(int cornerX, int cornerY) { //non default
+    x=cornerX;
+    y=cornerY;
+  }
+  //methods
+  
+}
+/*
+fields
+ -set using instance variables
+ -declared inside the class but outside methods
+ -u do not want to directly interact with the fields outside of the class
+ -u do not want users of a class to interact with the instance variables
+ -
+
+functions and methods are the same thing in this context
+
+constructors
+ -functions used to create new instances of an object
+ -returns even though return keyword is not used 
+ -name is the name of class
+ -no parameters = default constructor (eg ball class above)
+ -multiple constructors, same name, diff parameters
+
+*/

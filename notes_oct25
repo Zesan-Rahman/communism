@@ -1,0 +1,22 @@
+/*
+2 integers in any arithmetic op = always get int
+same with floating points
+so you dont lose precision
+
+int x = int(10.0/4); // with no int op is float
+println(x);
+*/
+
+/*
+OVERLOADING METHODS
+by writing 2 definitions for the same name of a method
+overloaded methods just have diff parameters
+
+this
+java keyword
+ -allows calling constructor of a class from within a different constructor
+ -inside any method or constructor, this will refer to the current/ calling object
+ -
+
+
+*/
